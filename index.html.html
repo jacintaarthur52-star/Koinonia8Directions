@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOINONIA 8.0 - Directions to St Arnold Jassen Spirituality Center</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 15px;
+        }
+        .accordion-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .accordion-header {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .accordion-header:hover {
+            background-color: #f1f3f5;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #fff;
+        }
+        .accordion-content ul {
+            margin: 0;
+            padding: 20px 20px 20px 40px;
+            list-style-type: disc;
+        }
+        .accordion-content li {
+            margin-bottom: 12px;
+        }
+        .accordion-content li:last-child {
+            margin-bottom: 0;
+        }
+        .icon {
+            transition: transform 0.3s ease;
+            font-size: 0.8rem;
+        }
+        /* Active states */
+        .accordion-item.active {
+            border-color: #0056b3;
+            box-shadow: 0 2px 8px rgba(0,86,179,0.1);
+        }
+        .accordion-item.active .accordion-header {
+            background-color: #e7f1ff;
+            color: #0056b3;
+        }
+        .accordion-item.active .icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>KOINONIA 8.0 - Directions to St Arnold Jassen Spirituality Center</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            1. Directions from Accra (Central/ East/North)
+            <span class="icon">▼</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>The Route:</strong> Join the main Mallam-Kasoa Highway (N1) heading towards Central Region/Kasoa.</li>
+                <li><strong>Key Milestones:</strong> Pass through McCarthy Hill, Weija, and cross the Weija Lake bridge.</li>
+                <li><strong>Where to Branch:</strong> Just after crossing the bridge and passing the site of the Old Toll Booth, look out for Tuba Junction.</li>
+                <li><strong>Final Stretch:</strong> Branch left at Tuba Junction onto the Tuba-Kokrobite road. Follow the main township road heading up towards the scenic Tuba Hill. Ask for or follow signs to the St. Arnold Janssen Spirituality Centre (AJSC).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            2. Directions from Winneba (and the Central/Western Region)
+            <span class="icon">▼</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>The Route:</strong> Take the main Winneba-Accra Road (N1) heading towards Accra.</li>
+                <li><strong>Key Milestones:</strong> Pass through Budumburam and drive straight through the main Kasoa township.</li>
+                <li><strong>Where to Branch:</strong> Keep driving past Kasoa towards Accra. Before you reach the Weija Lake bridge, you will arrive at Tuba Junction (just before the old toll booth site).</li>
+                <li><strong>Final Stretch:</strong> Turn right at Tuba Junction. Follow the road into the township and head up towards the Tuba Hill area where the spirituality centre is located.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            3. Directions from Kumasi (and the Ashanti/Eastern Region)
+            <span class="icon">▼</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>The Route:</strong> Take the main Kumasi-Accra Highway (N6) down south.</li>
+                <li><strong>Connecting Route (To Avoid Central Accra Traffic):</strong> When you approach the outskirts of Accra, it is best to take the Nsawam-Amasaman-Pokuase route or use the Akweteman/Lapaz connection onto the George Walker Bush Highway (N1) heading toward Mallam.</li>
+                <li><strong>Key Milestones:</strong> From the Mallam Interchange, drive straight on the Mallam-Kasoa Highway past Weija.</li>
+                <li><strong>Where to Branch:</strong> Right after passing the Old Toll Booth area, look for Tuba Junction.</li>
+                <li><strong>Final Stretch:</strong> Branch left at the junction and follow the road up into the Tuba Hill community to locate the centre.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const content = item.querySelector('.accordion-content');
+            
+            // Close other items if open
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = null;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
